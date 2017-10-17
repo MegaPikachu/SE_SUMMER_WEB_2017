@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="model.MonthShareCount" table="monthsharecount">
+  <composite-id>
+        <key-property name="count1" column="count1"></key-property>
+        <key-property name="count2" column="count2"></key-property>
+        <key-property name="count3" column="count3"></key-property>
+        <key-property name="count4" column="count4"></key-property>
+        <key-property name="count5" column="count5"></key-property>
+        <key-property name="count6" column="count6"></key-property>
+        <key-property name="count7" column="count7"></key-property>
+        <key-property name="count8" column="count8"></key-property>
+        <key-property name="count9" column="count9"></key-property>
+        <key-property name="count10" column="count10"></key-property>
+        <key-property name="count11" column="count11"></key-property>
+        <key-property name="count12" column="count12"></key-property>
+  </composite-id>
+ 
+  
+ </class>
+</hibernate-mapping>

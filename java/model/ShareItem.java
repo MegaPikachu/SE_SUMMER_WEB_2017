@@ -1,0 +1,172 @@
+package model;
+
+import java.security.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class ShareItem {
+	private String sid;
+    private int uid;
+    private String username;
+    private String title;
+    private int picnum;
+    private Date starttime;
+    private Date endtime;
+    private int upvote;
+    private int browse;
+    private int comment;
+    private String poem;
+    private int type;
+    
+    public ShareItem(){
+    	
+    }
+    
+    public ShareItem(String sid, int uid, String username, String title, int picnum, java.util.Date starttime, java.util.Date endtime, int upvote,int browse, int comment, String poem,int type){ 
+    	this.sid = sid;
+    	this.uid = uid;
+    	this.username = username;
+    	this.title = title;
+    	this.picnum = picnum;
+    	this.starttime = starttime;
+    	this.endtime = endtime;
+    	this.upvote = upvote;
+    	this.browse = browse;
+    	this.comment = comment;
+    	this.poem = poem;
+    	this.type = type;
+    }
+    
+    public ShareItem(SelectedShare selectedShare){ 
+    	this.sid = selectedShare.getSid();
+    	this.uid = selectedShare.getUid();
+    	this.username = selectedShare.getUsername();
+    	this.title = selectedShare.getTitle();
+    	this.picnum = selectedShare.getPicnum();
+    	this.starttime = selectedShare.getStarttime();
+    	this.endtime = selectedShare.getEndtime();
+    	this.upvote = selectedShare.getUpvote();
+    	this.browse = selectedShare.getBrowse();
+    	this.comment = selectedShare.getComment();
+    	this.poem = selectedShare.getPoem();
+    	this.type = selectedShare.getType();
+    }
+    
+    public ShareItem(Saitem satm){
+    	this.sid = satm.getSid();
+    	this.uid = satm.getUid();
+    	this.username = satm.getUsername();
+    	this.title = satm.getTitle();
+    	this.picnum = satm.getPicnum();
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    	try {
+			this.starttime = sdf.parse(satm.getStarttime());
+	    	this.endtime = sdf.parse(satm.getEndtime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+    	this.upvote = satm.getUpvote();
+    	this.browse = satm.getBrowse();
+    	this.comment = satm.getComment();
+    	this.poem = satm.getPoem();
+    	this.type = satm.getType();
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPicnum() {
+        return picnum;
+    }
+
+    public void setPicnum(int picnum) {
+        this.picnum = picnum;
+    }
+
+	public String getSid() {
+		return sid;
+	}
+
+	public void setSid(String sid) {
+		this.sid = sid;
+	}
+
+	public int getComment() {
+		return comment;
+	}
+
+	public void setComment(int comment) {
+		this.comment = comment;
+	}
+
+	public int getUpvote() {
+		return upvote;
+	}
+
+	public void setUpvote(int upvote) {
+		this.upvote = upvote;
+	}
+
+
+	public Date getStarttime() {
+		return starttime;
+	}
+
+	public void setStarttime(Date starttime) {
+		this.starttime = starttime;
+	}
+
+	public String getPoem() {
+		return poem;
+	}
+
+	public void setPoem(String poem) {
+		this.poem = poem;
+	}
+
+	public Date getEndtime() {
+		return endtime;
+	}
+
+	public void setEndtime(Date endtime) {
+		this.endtime = endtime;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public int getBrowse() {
+		return browse;
+	}
+
+	public void setBrowse(int browse) {
+		this.browse = browse;
+	}
+}

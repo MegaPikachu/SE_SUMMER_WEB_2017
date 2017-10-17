@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+ <class name="model.Comment" table="comment">
+  <id name="cid" type="int">
+   <column name="cid"/>
+   <generator class="identity"/>
+  </id>
+  <property  name="sid" type="java.lang.String" >
+   <column name="sid"/>
+  </property>
+  <property  name="uida" type="java.lang.Integer">
+   <column name="uida"/>
+  </property>
+  <property  name="unamea" type="java.lang.String">
+   <column name="unamea"/>
+  </property>
+  <property  name="uidb" type="java.lang.Integer">
+   <column name="uidb"/>
+  </property>
+  <property  name="unameb" type="java.lang.String">
+   <column name="unameb"/>
+  </property>
+   <property  name="comment" type="java.lang.String">
+   <column name="comment"/>
+  </property>
+ </class>
+</hibernate-mapping>
